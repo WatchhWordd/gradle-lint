@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+buildscript {
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/repository/jcenter'
+        }
+        maven {
+            url 'http://maven.aliyun.com/repository/google'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/repository/jcenter'
+    }
+    maven {
+        url 'http://maven.aliyun.com/repository/google'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
