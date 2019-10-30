@@ -1,3 +1,4 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'groovy'
 apply plugin: 'maven'
 
@@ -30,3 +31,31 @@ dependencies {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+version = "0.0.1"    //配置插件的版本号
+group = "com.gradle.customize"
+archivesBaseName = "lint"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            // 发布到本地maven的对应路径
+            repository(url: 'file:../plugin/libs/maven_local')
+        }
+    }
+}
+
+publish {
+    groupId = "${group}"
+    artifactId = "${archivesBaseName}"
+    publishVersion = "${version}"
+
+    //项目描述
+    desc = 'gradle插件关于lint'
+    website = 'https://github.com/WatchhWordd/gradle-lint'
+    bintrayUser = 'WatchhWordd'
+    userOrg = 'WatchhWordd'
+    //API Key
+    bintrayKey = "e7b814a1d78917a8227c5401660ccd78150168c7"
+    dryRun = false
+}

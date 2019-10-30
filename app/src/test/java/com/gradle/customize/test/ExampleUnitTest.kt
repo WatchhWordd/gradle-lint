@@ -1,4 +1,4 @@
-package com.haier.uhome.plugin_lint
+package com.gradle.customize.test
 
 import org.junit.Test
 

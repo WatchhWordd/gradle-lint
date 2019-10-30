@@ -1,4 +1,4 @@
-package com.haier.uhome.plugin_lint
+package com.gradle.customize.test
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,7 +1,8 @@
-package com.haier.uhome.plugin_lint
+package com.gradle.customize.test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.haier.uhome.plugin_lint.R
 
 class MainActivity : AppCompatActivity() {
 
